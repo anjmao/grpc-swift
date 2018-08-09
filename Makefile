@@ -1,7 +1,7 @@
 UNAME_S = $(shell uname -s)
 
 ifeq ($(UNAME_S),Linux)
-  CFLAGS = -Xswiftc -static-stdlib -c release
+  CFLAGS = -Xswiftc -static-stdlib
 else
   CFLAGS = -Xcc -ISources/BoringSSL/include -Xlinker -lz
 endif
